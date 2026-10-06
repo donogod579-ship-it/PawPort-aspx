@@ -1,0 +1,31 @@
+<%@ Master Language="C#" %>
+<!DOCTYPE html>
+<html lang="es">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title><%: Page.Title %> - PawPort Clínica</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/pawport.css" rel="stylesheet" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header class="nav-paw">
+            <div class="container nav-inner">
+                <a class="brand" runat="server" href="~/DashboardClinica">🐾 PawPort Clínica</a>
+                <nav class="menu">
+                    <a runat="server" href="~/DashboardClinica">Dashboard</a>
+                    <a runat="server" href="~/GestionCitas">Citas</a>
+                    <a runat="server" href="~/" class="btn-line">Cerrar sesión</a>
+                </nav>
+            </div>
+        </header>
+        <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        <footer class="footer-paw">
+            <div class="container footer-bottom" style="border:0;margin:0">© <%: DateTime.Now.Year %> PawPort - Panel de la clínica</div>
+        </footer>
+    </form>
+</body>
+</html>

@@ -1,0 +1,42 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+<!DOCTYPE html>
+<html lang="es">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title><%: Page.Title %> - PawPort</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/pawport.css" rel="stylesheet" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header class="nav-paw">
+            <div class="container nav-inner">
+                <a class="brand" runat="server" href="~/">🐾 PawPort</a>
+                <nav class="menu">
+                    <a runat="server" href="~/">Inicio</a>
+                    <a runat="server" href="~/Portafolio">Portafolio</a>
+                    <a runat="server" href="~/ExplorarClinicas">Explorar Clínicas</a>
+                    <a runat="server" href="~/MisMascotas">Mis Mascotas</a>
+                    <a runat="server" href="~/AgendarCita">Agendar Cita</a>
+                    <a runat="server" href="~/Login">Iniciar sesión</a>
+                    <a runat="server" href="~/RegistroUsuario" class="btn-paw">Registrarse</a>
+                </nav>
+            </div>
+        </header>
+        <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        <footer class="footer-paw">
+            <div class="container">
+                <div class="grid">
+                    <div><h4>🐾 PawPort</h4><p>El pasaporte médico unificado para tu mascota. Proyecto de A2D2.</p></div>
+                    <div><h4>Plataforma</h4><a runat="server" href="~/ExplorarClinicas">Clínicas</a><a runat="server" href="~/Portafolio">Portafolio</a></div>
+                    <div><h4>Contacto</h4><p>contacto@pawport.com<br />+503 2222 0000<br />San Salvador, El Salvador</p></div>
+                </div>
+                <div class="footer-bottom">© <%: DateTime.Now.Year %> PawPort - A2D2. Todos los derechos reservados.</div>
+            </div>
+        </footer>
+    </form>
+</body>
+</html>
